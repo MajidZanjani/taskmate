@@ -10,7 +10,6 @@ export const ShowTask = ({
 }) => {
   const handleEdit = (id) => {
     const selectedTask = taskList.find((todo) => todo.id === id);
-    console.log(selectedTask);
     setTask(selectedTask);
     setDueDate(TimeFormatter(selectedTask.dueDate));
   };
