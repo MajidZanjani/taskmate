@@ -57,7 +57,7 @@ export const AddTask = ({
           name="task"
           autoComplete="off"
           placeholder="add task"
-          maxLength="25"
+          maxLength="35"
           value={task.name || ''}
           onChange={(e) => setTask({ ...task, name: e.target.value })}
         />
@@ -67,7 +67,9 @@ export const AddTask = ({
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
-        <button type="submit">{task.id ? 'Update' : 'Add'}</button>
+        <div className="addBtnDiv">
+          <button type="submit">{task.id ? 'Update' : 'Add'}</button>
+        </div>
       </form>
     </section>
   );
